@@ -1,0 +1,40 @@
+{
+    "type": "page",
+    "title": "Select Scenario and Difficulty",
+    "body": {
+      "type": "form",
+      "api": "/learn/api/generate-sentence",
+      "redirect": "/learn/static/index.html#/project/list/test",
+      "controls": [
+        {
+          "type": "select",
+          "label": "Choose Scenario",
+          "name": "scenario",
+          "options": [
+            { "label": "Daily Conversation", "value": "日常" },
+            { "label": "Business Communication", "value": "商务" }
+          ]
+        },
+        {
+          "type": "radios",
+          "label": "Choose Difficulty",
+          "name": "difficulty",
+          "options": [
+            { "label": "Simple", "value": "初级" },
+            { "label": "Moderate", "value": "中级" },
+            { "label": "Difficult", "value": "高级" }
+          ]
+        },
+        {
+          "type": "input-number",
+          "name": "number",
+          "label": "句子数量"
+        },
+        {
+          "type": "submit",
+          "label": "Get Sentence"
+        }
+      ]
+    }
+  }
+  

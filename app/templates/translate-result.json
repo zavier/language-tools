@@ -1,0 +1,32 @@
+{
+    "type": "page",
+    "title": "Translation Result",
+    "body": [
+      {
+        "type": "tpl",
+        "tpl": "<h2>Your Translation Result</h2>"
+      },
+      {% for res in res_list %}
+      {
+        "type": "tpl",
+        "tpl": "<p>原文:{{res.source}}</p>"
+      },
+      {
+        "type": "tpl",
+        "tpl": "<p>翻译:{{res.translate}}</p>"
+      },
+      {
+        "type": "textarea",
+        "value": {{res.suggestion | safe | tojson }}
+      },
+      {% endfor %}
+      {
+        "type": "button",
+        "label": "Choose Another Scenario",
+        "level": "primary",
+        "actionType": "link",
+        "link": "/scenario"
+      }
+    ]
+  }
+  

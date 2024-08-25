@@ -1,0 +1,30 @@
+{
+    "type": "page",
+    "title": "Translation Result",
+    "body": [
+      {
+        "type": "tpl",
+        "tpl": "<h2>Your Translation Result</h2>"
+      },
+      {
+        "type": "tpl",
+        "tpl": "<p>Your Translation: ${user_translation}</p>"
+      },
+      {
+        "type": "tpl",
+        "tpl": "<p>Score: ${score}</p>"
+      },
+      {
+        "type": "tpl",
+        "tpl": "<h3>Analysis:</h3><p>${analysis}</p>"
+      },
+      {
+        "type": "button",
+        "label": "Choose Another Scenario",
+        "level": "primary",
+        "actionType": "link",
+        "link": "/scenario"
+      }
+    ]
+  }
+  

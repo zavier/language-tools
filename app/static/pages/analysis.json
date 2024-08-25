@@ -1,0 +1,35 @@
+{
+    "type": "page",
+    "title": "Grammar Analysis",
+    "body": {
+      "type": "form",
+      "api": "/api/grammar-analysis",
+      "controls": [
+        {
+          "type": "textarea",
+          "label": "English Sentence",
+          "name": "english-sentence",
+          "placeholder": "Type your English sentence here"
+        },
+        {
+          "type": "submit",
+          "label": "Submit for Analysis"
+        }
+      ],
+      "actions": [
+        {
+          "type": "button",
+          "label": "View Analysis Result",
+          "actionType": "dialog",
+          "dialog": {
+            "title": "Analysis Result",
+            "body": {
+              "type": "tpl",
+              "tpl": "${analysis_result}"
+            }
+          }
+        }
+      ]
+    }
+  }
+  

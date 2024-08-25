@@ -1,0 +1,27 @@
+{
+    "type": "page",
+    "title": "Translate Sentence",
+    "body": {
+      "type": "form",
+      "api": "/api/submit-translation",
+      "controls": [
+        {
+          "type": "static",
+          "label": "Chinese Sentence",
+          "name": "chinese-sentence",
+          "value": "这里显示从后端获取的中文句子"
+        },
+        {
+          "type": "textarea",
+          "label": "English Translation",
+          "name": "english-translation",
+          "placeholder": "Type your English translation here"
+        },
+        {
+          "type": "submit",
+          "label": "Submit Translation"
+        }
+      ]
+    }
+  }
+  

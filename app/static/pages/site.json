@@ -1,0 +1,58 @@
+{
+  "status": 0,
+  "msg": "",
+  "data": {
+    "pages": [
+      {
+        "label": "Home",
+        "url": "/",
+        "redirect": "/translate/select"
+      },
+      {
+        "label": "菜单",
+        "children": [
+          {
+            "label": "翻译练习",
+            "url": "/translate/select",
+            "schemaApi": "get:pages/translate-select.json"
+          },
+          {
+            "label": "翻译",
+            "url": "/translate/select/:id",
+            "schemaApi": "get:/learn/api/get-sentence-detail/${SPLIT(window:location.hash, '/')[3]}"
+          },
+          {
+            "label": "句子分析",
+            "url": "/translate/result/:id",
+            "schemaApi": "get:/learn/api/get-translate-result/${SPLIT(window:location.hash, '/')[3]}"
+          },
+          {
+            "label": "分摊信息",
+            "url": "/sharing/:id/list",
+            "schemaApi": "get:/expense/pages/sharing-list.json"
+          },
+          {
+            "label": "统计信息",
+            "url": "/statistics/:id",
+            "schemaApi": "get:/expense/pages/statistics.json"
+          },
+          {
+            "label": "新增",
+            "url": "/crud/new/:id",
+            "schemaApi": "get:/pages/crud-new.json"
+          },
+          {
+            "label": "查看",
+            "url": "/crud/:id",
+            "schemaApi": "get:/pages/crud-view.json"
+          },
+          {
+            "label": "修改",
+            "url": "/crud/:id/edit",
+            "schemaApi": "get:/pages/crud-edit.json"
+          }
+        ]
+      }
+    ]
+  }
+}

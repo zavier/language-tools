@@ -1,0 +1,29 @@
+{
+    "type": "page",
+    "title": "Translate Sentence",
+    "body": {
+      "type": "form",
+      "api": "/learn/api/submit-translation",
+      "controls": [
+        {% for item in data_list %}
+        {
+          "type": "static",
+          "label": "Chinese Sentence",
+          "name": "source-{{item.id}}",
+          "value": "{{item.source}}"
+        },
+        {
+          "type": "textarea",
+          "label": "English Translation",
+          "name": "target-{{item.id}}",
+          "placeholder": "Type your English translation here"
+        },
+        {% endfor %}
+        {
+          "type": "submit",
+          "label": "Submit Translation"
+        }
+      ]
+    }
+  }
+  
